@@ -193,6 +193,10 @@ button:hover {
     opacity: 0;
 }
 
+.search-input:not(:placeholder-shown) ~ span {
+    opacity: 0;
+}
+
 .search-input:focus {
     border: 2px solid var(--default-dark-color);
     outline: 0;
