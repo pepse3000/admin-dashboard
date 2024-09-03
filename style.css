@@ -156,11 +156,12 @@ button:hover {
 }
 
 .dashboard-header-btns > .nav-icon > img {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .dashboard-header-btns > .nav-icon > img:hover {
     opacity: 1;
+    transition: 0.3s;
 }
 
 .search-btn {
@@ -177,10 +178,22 @@ button:hover {
 }
 
 .search-btn .search-text {
+    pointer-events: none;
     position: absolute;
     padding: 10px;
     margin-left: 10px;
     color: var(--default-gray-color);
     right: 0;
     left: 0;
+    transition: 0.2s;
+}
+
+.search-input:focus ~ span,
+.search-input:focus-visible ~ span {
+    opacity: 0;
+}
+
+.search-input:focus {
+    border: 2px solid var(--default-dark-color);
+    outline: 0;
 }
