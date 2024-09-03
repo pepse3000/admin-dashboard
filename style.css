@@ -1,0 +1,27 @@
+@import url();
+
+:root {
+    --default-dark-color: #344767;
+    --default-white-color: #FFFFFF;
+    --default-gray-color: #7B809A;
+    --default-background-color: #F0F2F5;
+}
+
+body {
+    background-color: var(--default-background-color);
+}
+
+.container {
+    display: flex;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    padding: 30px;
+    margin-right: 40px;
+    border-radius: 15px;
+    position: sticky;
+    background: linear-gradient(180deg, #3E3D45 0%, #202020 100%);
+}
