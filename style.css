@@ -36,8 +36,8 @@ body {
     display: flex;
     flex-direction: column;
     color: var(--default-white-color);
-    min-width: 230px;
-    max-width: 250px;
+    min-width: 270px;
+    max-width: 300px;
 }
 
 .profile, .logo {
@@ -138,7 +138,6 @@ button:hover {
 .header {
     display: flex;
     align-items: center;
-    flex: 1;
     justify-content: space-between;
 }
 
@@ -149,6 +148,7 @@ button:hover {
 
 .header-nav-right {
     display: flex;
+    margin-right: 30px;
     align-items: center;
     gap: 20px;
 }
@@ -220,7 +220,7 @@ button:hover {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 40px;
 }
 
 .dashboard-info-small {
@@ -229,14 +229,13 @@ button:hover {
     border-radius: 15px;
     flex: 1;
     width: 300px;
-    padding: 20px;
     padding-top: 0px;
-    box-shadow: 0px 5px 20px -7px  rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 10px -5px  rgba(0, 0, 0, 0.5);
 }
 
 .content-img {
     position: absolute;
-    bottom: 78%;
+    bottom: 73%;
     left: 30px;
     border-radius: 15px;
     width: 4.5em;
@@ -268,15 +267,60 @@ button:hover {
     background: linear-gradient(180deg, #439DEE 0%, #1E78E9 100%);
 }
 
-.info-up {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    border-bottom: 1px solid var(--default-gray-color);
+    /* INFO UP */
+
+    .info-up {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        border-bottom: 2px solid #e4e4e4;
+    }
+
+    .info-up p {
+        font-weight: 300;
+        padding: 0px;
+        margin: 20px 20px 0px 0px;
+    }
+
+    p.number {
+        margin: 5px 20px 10px 0px;
+        font-weight: 600;
+        font-size: 26px;
+    }
+
+
+    /* INFO DOWN */
+
+    .info-down {
+        display: flex;
+        padding: 10px;
+        margin-left: 10px;
+        gap: 8px;
+    }
+
+    .info-down p {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    p.positive {
+        font-weight: 600;
+        color:#4BA64F;
+    }
+
+/* BIG INFO + TABLE */
+
+.big-info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
 }
 
-.info-up p {
-    font-weight: 300;
-    padding: 10px;
-    margin: 0px;
+.dashboard-info-big {
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px -5px  rgba(0, 0, 0, 0.5);
 }
