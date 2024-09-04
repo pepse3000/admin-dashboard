@@ -7,6 +7,9 @@
     --default-background-color: #F0F2F5;
     --default-hover-color: #4F4F52;
     --default-active-color: #E91F63;
+    --red-gradient: linear-gradient(180deg, #E93B77 0%, #DA1F63 100%);
+    --green-gradient: linear-gradient(180deg, #63B967 0%, #4BA64F 100%);
+    --black-gradient: linear-gradient(180deg, #3E3D45 0%, #202020 100%);
 }
 
 * {
@@ -36,7 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     color: var(--default-white-color);
-    min-width: 270px;
+    min-width: 250px;
     max-width: 300px;
 }
 
@@ -220,7 +223,7 @@ button:hover {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 30px;
 }
 
 .dashboard-info-small {
@@ -314,8 +317,8 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 40px;
-    margin-top: 50px;
+    gap: 30px;
+    margin-top: 60px;
 }
 
 .dashboard-info-big {
@@ -323,4 +326,67 @@ button:hover {
     background: white;
     border-radius: 15px;
     box-shadow: 0px 3px 10px -5px  rgba(0, 0, 0, 0.5);
+}
+
+.content-img-big {
+    position: absolute;
+    bottom: 73%;
+    left: 20px;
+    top: -30px;
+    border-radius: 15px;
+    width: 91%;
+    height: 15rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-big {
+    margin-top: 230px;
+}
+
+.info-big p {
+    margin-left: 25px;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+p.info-header {
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.info-big-down {
+    border-top: 2px solid #e4e4e4;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info-big-down > .nav-icon {
+    display: flex;
+    position: relative;
+    left: 20px;
+    align-items: center;
+    padding: 0px;
+}
+
+.info-big-down > p {
+    padding-left: 0px;
+    margin: 10px 0;
+}
+
+.dashboard-info-big:nth-child(1) > .content-img-big {
+    background: var(--red-gradient);
+}
+
+.dashboard-info-big:nth-child(2) > .content-img-big {
+    background: var(--green-gradient);
+}
+
+.dashboard-info-big:nth-child(3) > .content-img-big {
+    background: var(--black-gradient);
 }
