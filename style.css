@@ -64,9 +64,16 @@ body {
     justify-content: center;
 }
 
+.content {
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
 .collapse-btn {
     padding: 0 18px;
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     display: flex;
@@ -79,8 +86,10 @@ body {
     width: 100%;
 }
 
+
 button.collapsible,
-button.def-btn {
+button.def-btn,
+.collapse-btn {
     padding: 15px;
     display: flex;
     align-items: center;
@@ -99,6 +108,35 @@ button.collapsible.admin {
     padding: 10px;
 }
 
+button.collapsible.active {
+    background-color: var(--default-hover-color);
+}
+button.collapsible.active:hover {
+    background-color: var(--default-hover-color);
+}
+
+button.active {
+    background-color: var(--default-hover-color);
+}
+
+button.active-red {
+    background-color: var(--default-active-color);
+}
+
+button .collapse-icon {
+    transition: 0.3s;
+}
+
+button.collapsible.active .collapse-icon {
+    transition: 0.3s;
+    rotate: 180deg;
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: var(--default-hover-color);
+}
+
 .admin-photo {
     margin-right: 16px;
     border-radius: 20px;
@@ -114,17 +152,6 @@ button.collapsible.admin {
     justify-content: space-between;
 }
 
-button ~ .active {
-    background-color: var(--default-active-color);
-}
-button ~ .active:hover {
-    background-color: var(--default-active-color);
-}
-
-button:hover {
-    transition: 0.2s;
-    background-color: var(--default-hover-color);
-}
 
 /* MAIN */
 
