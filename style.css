@@ -487,7 +487,6 @@ td:nth-child(5) {
 }
 
 .avatar-holder {
-    background: black;
     width: 45px;
     height: 45px;
     border-radius: 30px;
@@ -511,4 +510,6 @@ p.product-header {
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: left;
 }
+
