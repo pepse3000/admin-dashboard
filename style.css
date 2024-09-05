@@ -74,6 +74,8 @@ body {
     transition: max-height 0.2s ease-out;
 }
 
+
+
 .collapse-btn {
     padding: 0 18px;
     overflow: hidden;
@@ -157,6 +159,7 @@ button:hover {
     align-items: center;
     justify-content: space-between;
 }
+
 
 
 /* MAIN */
@@ -430,14 +433,20 @@ p.info-header {
     flex-direction: column;
     background: white;
     grid-area: 2 / 1 / 2 / 4;
-    padding: 30px 0px 30px 30px;
+    padding: 20px 0px 10px 0px;
     border-radius: 15px;
     box-shadow: 0px 3px 10px -5px  rgba(0, 0, 0, 0.5);
 }
 
+.table h3 {
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 table {
     background: #ffffff;
-    border-collapse: separate;
+    border-collapse: collapse;
     font-size: 16px;
     line-height: 24px;
     text-align: left;
@@ -452,11 +461,23 @@ th {
     font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
+    padding-left: 30px;
 }
 
 td {
-    padding: 0px;
+    padding: 10px 0;
+    padding-left: 30px;
     margin: 0px;
+    border-top: 1px solid #e4e4e4;
+}
+
+td:nth-child(1) {
+    width: 50%;
+}
+
+td:nth-child(5) {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .product-info {
@@ -467,12 +488,27 @@ td {
 
 .avatar-holder {
     background: black;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     border-radius: 30px;
 }
 
 .product-info p {
+    font-weight: 300;
     padding: 0px;
     margin: 0px;
+}
+
+p.product-header {
+    font-weight: 500;
+}
+
+.green-text {
+    color:#4BA64F;
+}
+
+.refunds-number {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
